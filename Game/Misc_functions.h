@@ -1,5 +1,5 @@
 #include "Board.h"
-#include "Move_Logic.h"
+
 
 void find_king(Piece (*Board)[8], int *pos[], int colour){
     for(int i=0; i<=7; i++){
