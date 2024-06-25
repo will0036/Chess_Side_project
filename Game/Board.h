@@ -25,23 +25,25 @@ typedef struct Piece{
     enum Type type;
     enum Colour colour;
     char icon;
+    int moves;
+    int check;
 }Piece;
 
 //Fill 2 dimensional Board array with pieces for white and black in the correct positions
 void Board_Initialisation(Piece (*Board)[8]){
-    Piece Empty = {NONE,NEITHER,'0'};
-    Piece W_Pawn = {PAWN,WHITE,'P'};
-    Piece W_Bishop = {BISHOP,WHITE,'B'};
-    Piece W_Knight = {KNIGHT,WHITE,'H'};
-    Piece W_Rook = {ROOK,WHITE,'R'};
-    Piece W_Queen = {QUEEN,WHITE,'Q'};
-    Piece W_King = {KING,WHITE,'K'};
-    Piece B_Pawn = {PAWN,BLACK,'P'};
-    Piece B_Bishop = {BISHOP,BLACK,'B'};
-    Piece B_Knight = {KNIGHT,BLACK,'H'};
-    Piece B_Rook = {ROOK,BLACK,'R'};
-    Piece B_Queen = {QUEEN,BLACK,'Q'};
-    Piece B_King = {KING,BLACK,'K'};
+    Piece Empty = {NONE,NEITHER,'0',0,0};
+    Piece W_Pawn = {PAWN,WHITE,'P',0,0};
+    Piece W_Bishop = {BISHOP,WHITE,'B',0,0};
+    Piece W_Knight = {KNIGHT,WHITE,'H',0,0};
+    Piece W_Rook = {ROOK,WHITE,'R',0,0};
+    Piece W_Queen = {QUEEN,WHITE,'Q',0,0};
+    Piece W_King = {KING,WHITE,'K',0,0};
+    Piece B_Pawn = {PAWN,BLACK,'P',0,0};
+    Piece B_Bishop = {BISHOP,BLACK,'B',0,0};
+    Piece B_Knight = {KNIGHT,BLACK,'H',0,0};
+    Piece B_Rook = {ROOK,BLACK,'R',0,0};
+    Piece B_Queen = {QUEEN,BLACK,'Q',0,0};
+    Piece B_King = {KING,BLACK,'K',0,0};
     for(int i=0; i<=7;i++){
         Board[1][i] = B_Pawn;
         Board[6][i] = W_Pawn;
